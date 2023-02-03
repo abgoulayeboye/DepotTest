@@ -3,14 +3,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Compiler') {
             steps {
-                echo 'Build App'
+                mvn compile
             }
         }
          stage('Test') {
             steps {
-                echo 'Test App'
+                mvn test
             }
         }
          stage('Deploy') {
